@@ -15,4 +15,4 @@ This is a "Command Line Interpreter" using java
 | cp -r | Takes 2 arguments, both are directories (empty or not) and copies the first directory (with all its content) into the second one. |
 | rm | Takes 1 argument which is a file name that exists in the current directory and removes this file. |
 | cat | Takes 1 argument and prints the file’s content or takes 2 arguments and concatenates the content of the 2 files and prints it.|
-| exit | which close the cLI. |
+| exit | which close the CLI. |
