@@ -167,7 +167,10 @@ public class Terminal {
     	String[] args = parser.getArgs();
     	for(String arg:args) {
     		File file = new File(arg);
-    		if(!file.mkdir()) {
+    		if(file.exists()) {
+    			System.out.println("\"" + arg + "\" is already exists!");
+    		}
+    		else if(!file.mkdir()) {
     			System.out.println("\"" + arg + "\" cannot be created!");
     		}
     	}
@@ -196,6 +199,9 @@ public class Terminal {
             if(paths!=null && paths.length == 0) {
         		dir.delete();
         	}
+            else if(!dir.isDirectory()) {
+            	System.out.println("Error: rmdir removes directories only!");
+            }
             else {
             	System.out.println("\"" + args[0] + "\" is not empty!");
             }
